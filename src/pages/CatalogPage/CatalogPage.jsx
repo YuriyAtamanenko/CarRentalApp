@@ -1,3 +1,4 @@
+import CatalogList from 'components/Catalog/CatalogList/CatalogList';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -9,5 +10,5 @@ export default function Catalog() {
     dispatch(getAll());
   }, [dispatch]);
 
-  return <div>Catalog</div>;
+  return <CatalogList />;
 }
