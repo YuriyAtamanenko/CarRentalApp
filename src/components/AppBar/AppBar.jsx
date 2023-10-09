@@ -1,11 +1,14 @@
-import { StyledLink } from './AppBar.styled';
+import { Header, StyledLink, Navigation } from './AppBar.styled';
 
 export default function AppBar() {
   return (
-    <div>
-      <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/catalog">Catalog</StyledLink>
-      <StyledLink to="/favorites">Favorites</StyledLink>
-    </div>
+    <Header>
+      <StyledLink to="/">Rentalcars</StyledLink>
+      <Navigation>
+        <StyledLink to="/">Home</StyledLink>
+        <StyledLink to="/catalog">Catalog</StyledLink>
+        <StyledLink to="/favorites">Favorites</StyledLink>
+      </Navigation>
+    </Header>
   );
 }
