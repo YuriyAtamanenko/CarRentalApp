@@ -1,12 +1,7 @@
-import { useSelector } from 'react-redux';
-import { selectCatalog } from 'redux/selectors';
 import { List } from './CatalogList.styled';
 import CatalogItem from '../CatalogItem/CatalogItem';
 
-export default function CatalogList() {
-  const catalog = useSelector(selectCatalog);
-  console.log(catalog);
-
+export default function CatalogList({ catalog }) {
   return (
     <List>
       {catalog.map(advert => (

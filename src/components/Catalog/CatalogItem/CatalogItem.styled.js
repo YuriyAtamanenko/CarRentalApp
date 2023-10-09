@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Card = styled.li`
-outline: 1px solid #cecece;
+  position: relative;
   width: 274px;
   height: 426px;
     }
@@ -72,4 +72,12 @@ export const LearnMoreButton = styled.button`
   &:focus {
     background: #0b44cd;
   }
+`;
+
+export const AddRemoveButton = styled.button`
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none;
+  background: none;
 `;
