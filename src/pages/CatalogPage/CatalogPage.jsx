@@ -4,11 +4,13 @@ import CatalogList from 'components/Catalog/CatalogList/CatalogList';
 import { getAll } from 'redux/Catalog/operations';
 import { selectCatalog } from 'redux/Catalog/selectors';
 import LoadMoreBtn from 'components/LoadMoreBtn/LoadMoreBtn';
+import Filter from 'components/Filter/Filter';
 export default function Catalog() {
   const dispatch = useDispatch();
   const catalog = useSelector(selectCatalog);
   const [isShowBtn, setIsShowBtn] = useState(true);
   const [pageCtrl, setPageCtrl] = useState(8);
+  const [filteredAdverts, setFilteredAdverts] = useState(null);
 
   useEffect(() => {
     dispatch(getAll());
@@ -24,9 +26,33 @@ export default function Catalog() {
     setPageCtrl(prevState => prevState + 8);
   };
 
+  const onFiltering = ({
+    selectedMake,
+    selectedPrice,
+    fromMiliage,
+    toMiliage,
+  }) => {
+    const filtering = catalog.filter(
+      ({ make, rentalPrice, mileage }) =>
+        make.includes(selectedMake) &&
+        Number(rentalPrice.slice(1, rentalPrice.length)) <= selectedPrice &&
+        mileage >= fromMiliage &&
+        mileage <= toMiliage
+    );
+
+    setFilteredAdverts(filtering);
+    setIsShowBtn(false);
+  };
+
   return (
     <section>
-      <CatalogList catalog={catalog.slice(0, pageCtrl)} />
+      <Filter onFiltering={onFiltering} />
+      {filteredAdverts ? (
+        <CatalogList catalog={filteredAdverts.slice(0, pageCtrl)} />
+      ) : (
+        <CatalogList catalog={catalog.slice(0, pageCtrl)} />
+      )}
+
       {isShowBtn && <LoadMoreBtn onShowNextPage={onShowNextPage} />}
     </section>
   );
