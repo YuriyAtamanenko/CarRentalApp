@@ -121,7 +121,7 @@ export const RentalCarButton = styled.a`
 
   &:hover,
   &:focus {
-    background: #0b44cd;
+    background: #2b498e;
   }
 `;
 

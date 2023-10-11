@@ -12,7 +12,7 @@ export default function AppBar() {
     <Header>
       <HeadContainer>
         <StyledHomeLink to="/">
-          <svg width={60} height={60}>
+          <svg width={72} height={72}>
             <use href={Icons + '#icon-icon-logo'}></use>
           </svg>
           CarRental

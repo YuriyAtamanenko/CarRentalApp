@@ -6,6 +6,7 @@ import { selectCatalog } from 'redux/Catalog/selectors';
 import LoadMoreBtn from 'components/LoadMoreBtn/LoadMoreBtn';
 import Filter from 'components/Filter/Filter';
 import { Container } from 'components/App/App.styled';
+import NotFoundFilterCatalog from 'components/Catalog/NotFoundFilterCatalog/NotFoundFilterCatalog';
 export default function Catalog() {
   const dispatch = useDispatch();
   const catalog = useSelector(selectCatalog);
@@ -54,6 +55,7 @@ export default function Catalog() {
         <CatalogList catalog={catalog.slice(0, pageCtrl)} />
       )}
       {isShowBtn && <LoadMoreBtn onShowNextPage={onShowNextPage} />}
+      {filteredAdverts?.length === 0 && <NotFoundFilterCatalog />}
     </Container>
   );
 }

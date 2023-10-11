@@ -46,7 +46,7 @@ export const StyledLink = styled(NavLink)`
 
   &:hover,
   &:focus {
-    background: #0b44cd;
+    background: #2b498e;
   }
 `;
 

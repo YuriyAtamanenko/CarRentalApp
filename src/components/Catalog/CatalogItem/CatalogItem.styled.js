@@ -72,7 +72,7 @@ export const LearnMoreButton = styled.button`
 
   &:hover,
   &:focus {
-    background: #0b44cd;
+    background: #2b498e;
   }
 `;
 

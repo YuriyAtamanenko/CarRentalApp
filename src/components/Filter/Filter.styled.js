@@ -26,7 +26,7 @@ export const Submit = styled.button`
 
   &:hover,
   &:focus {
-    background: #0b44cd;
+    background: #2b498e;
   }
 `;
 
@@ -60,6 +60,10 @@ export const FromInput = styled.input`
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+
+  &:focus {
+    border: 1px solid #2684ff;
+  }
 `;
 
 export const ToInput = styled.input`
@@ -79,6 +83,10 @@ export const ToInput = styled.input`
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+
+  &:focus {
+    border: 1px solid #2684ff;
+  }
 `;
 
 export const ImputBox = styled.div`

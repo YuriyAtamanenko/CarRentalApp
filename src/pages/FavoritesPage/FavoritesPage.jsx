@@ -7,6 +7,8 @@ import LoadMoreBtn from 'components/LoadMoreBtn/LoadMoreBtn';
 
 import { selectFavorites } from 'redux/Favorites/selectors';
 import { Container } from 'components/App/App.styled';
+import NotFoundFavorites from 'components/Favorites/NotFoundFavorites';
+import NotFoundFilterCatalog from 'components/Catalog/NotFoundFilterCatalog/NotFoundFilterCatalog';
 
 export default function Favorites() {
   const favorites = useSelector(selectFavorites);
@@ -52,6 +54,8 @@ export default function Favorites() {
         <CatalogList catalog={favorites.slice(0, pageCtrl)} />
       )}
       {isShowBtn && <LoadMoreBtn onShowNextPage={onShowNextPage} />}
+      {favorites.length === 0 && <NotFoundFavorites />}
+      {filteredAdverts?.length === 0 && <NotFoundFilterCatalog />}
     </Container>
   );
 }

@@ -5,7 +5,7 @@ export const Header = styled.header`
   display: flex;
 
   justify-content: center;
-  background-color: #3470ff;
+  background-color: #2b498e;
 `;
 
 export const HeadContainer = styled.div`
@@ -16,8 +16,8 @@ export const HeadContainer = styled.div`
 `;
 
 export const StyledLink = styled(NavLink)`
-  padding: 16px 0px;
-  font-size: 20px;
+  padding: 30px 0px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
@@ -33,7 +33,7 @@ export const StyledLink = styled(NavLink)`
 export const StyledHomeLink = styled(NavLink)`
   display: flex;
   align-items: center;
-  font-size: 30px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;

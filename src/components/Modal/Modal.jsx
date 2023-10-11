@@ -44,6 +44,13 @@ export default function Modal({ onCloseModal, info }) {
     }
   };
 
+  const onFormatMileage = value => {
+    return value
+      .toString()
+      .replace(/,/g, '')
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+
   return createPortal(
     <Backdrop onClick={handleBackdropClick}>
       <ModalContainer>
@@ -83,7 +90,8 @@ export default function Modal({ onCloseModal, info }) {
         <br />
         <RentalCondition>{deposit}</RentalCondition>
         <RentalCondition>
-          Mileage: <ConditionValue> {info.mileage}</ConditionValue>
+          Mileage:{' '}
+          <ConditionValue> {onFormatMileage(info.mileage)}</ConditionValue>
         </RentalCondition>
         <RentalCondition>
           Price: <ConditionValue> {info.rentalPrice}</ConditionValue>
