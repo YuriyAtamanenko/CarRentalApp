@@ -6,7 +6,7 @@ import { selectCatalog } from 'redux/Catalog/selectors';
 import LoadMoreBtn from 'components/LoadMoreBtn/LoadMoreBtn';
 import Filter from 'components/Filter/Filter';
 import { Container } from 'components/App/App.styled';
-import NotFoundFilterCatalog from 'components/Catalog/NotFoundFilterCatalog/NotFoundFilterCatalog';
+import NotFoundFilterCatalog from 'components/NotFound/NotFoundFilterCatalog/NotFoundFilterCatalog';
 export default function Catalog() {
   const dispatch = useDispatch();
   const catalog = useSelector(selectCatalog);
@@ -50,7 +50,7 @@ export default function Catalog() {
     <Container>
       <Filter onFiltering={onFiltering} />
       {filteredAdverts ? (
-        <CatalogList catalog={filteredAdverts.slice(0, pageCtrl)} />
+        <CatalogList catalog={filteredAdverts} />
       ) : (
         <CatalogList catalog={catalog.slice(0, pageCtrl)} />
       )}
