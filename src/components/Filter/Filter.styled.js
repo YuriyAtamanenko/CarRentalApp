@@ -62,7 +62,8 @@ export const FromInput = styled.input`
   line-height: 20px;
 
   &:focus {
-    border: 1px solid #2684ff;
+    outline: 1px solid #2684ff;
+    border-right: 1px solid #2684ff;
   }
 `;
 
@@ -85,7 +86,8 @@ export const ToInput = styled.input`
   line-height: 20px;
 
   &:focus {
-    border: 1px solid #2684ff;
+    outline: 1px solid #2684ff;
+    border-right: 1px solid #2684ff;
   }
 `;
 
