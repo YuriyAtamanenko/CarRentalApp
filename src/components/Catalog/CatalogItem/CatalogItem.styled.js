@@ -8,9 +8,11 @@ export const Card = styled.li`
 `;
 
 export const Image = styled.img`
-  width: 274px;
+  width: 100%;
   height: 268px;
   border-radius: 14px;
+  object-fit: cover;
+    background: linear-gradient(rgba(18, 20, 23, 0.5) 2.5%, rgba(18, 20, 23, 0) 41.07%);
   }
 `;
 

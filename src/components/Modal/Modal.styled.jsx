@@ -24,7 +24,7 @@ export const ModalContainer = styled.div`
   padding: 40px;
   z-index: 10;
   width: 541px;
-  height: 752px;
+  min-height: 752px;
 `;
 
 export const Image = styled.img`
@@ -32,6 +32,7 @@ export const Image = styled.img`
   height: 248px;
   border-radius: 14px;
 background: #F3F3F2;
+object-fit: cover;
   }
 `;
 

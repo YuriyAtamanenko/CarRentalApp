@@ -6,6 +6,7 @@ import CatalogList from 'components/Catalog/CatalogList/CatalogList';
 import LoadMoreBtn from 'components/LoadMoreBtn/LoadMoreBtn';
 
 import { selectFavorites } from 'redux/Favorites/selectors';
+import { Container } from 'components/App/App.styled';
 
 export default function Favorites() {
   const favorites = useSelector(selectFavorites);
@@ -43,7 +44,7 @@ export default function Favorites() {
   };
 
   return (
-    <section>
+    <Container>
       <Filter onFiltering={onFiltering} />
       {filteredAdverts ? (
         <CatalogList catalog={filteredAdverts.slice(0, pageCtrl)} />
@@ -51,6 +52,6 @@ export default function Favorites() {
         <CatalogList catalog={favorites.slice(0, pageCtrl)} />
       )}
       {isShowBtn && <LoadMoreBtn onShowNextPage={onShowNextPage} />}
-    </section>
+    </Container>
   );
 }
