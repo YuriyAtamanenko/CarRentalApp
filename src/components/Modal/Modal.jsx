@@ -16,7 +16,6 @@ import {
   CloseButton,
 } from './Modal.styled';
 import Icons from '../../images/sprite.svg';
-// import PropTypes from 'prop-types';
 
 const rootModal = document.querySelector('#root-modal');
 
