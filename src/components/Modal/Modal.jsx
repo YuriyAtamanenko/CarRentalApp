@@ -53,7 +53,12 @@ export default function Modal({ onCloseModal, info }) {
   return createPortal(
     <Backdrop onClick={handleBackdropClick}>
       <ModalContainer>
-        <Image src={info.img} height={248} width={461} />
+        <Image
+          src={info.img}
+          alt={info.make + ' ' + info.model}
+          height={248}
+          width={461}
+        />
         <HeadText>
           <CarTitle>
             {info.make} <CarModel>{info.model}</CarModel>, {info.year}

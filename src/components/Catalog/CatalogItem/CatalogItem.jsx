@@ -52,7 +52,12 @@ export default function CatalogItem({ info }) {
         </AddRemoveButton>
       )}
 
-      <Image src={info.img} height={268} width={274} />
+      <Image
+        src={info.img}
+        alt={info.make + ' ' + info.model}
+        height={268}
+        width={274}
+      />
       <HeadText>
         <CarTitle>
           {info.make}
