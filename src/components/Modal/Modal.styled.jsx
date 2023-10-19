@@ -24,7 +24,9 @@ export const ModalContainer = styled.div`
   padding: 40px;
   z-index: 10;
   width: 541px;
-  min-height: 752px;
+  max-height: 752px;
+  overflow: auto;
+  overflow-x: hidden;
 `;
 
 export const Image = styled.img`
