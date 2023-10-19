@@ -17,8 +17,8 @@ import { makesOptions } from 'db/makesList';
 import { pricesOptions } from 'db/priceList';
 
 export default function Filter({ onFiltering }) {
-  const [selectedMake, setSelectedMake] = useState('');
-  const [selectedPrice, setSelectedPrice] = useState('');
+  const [selectedMake, setSelectedMake] = useState(null);
+  const [selectedPrice, setSelectedPrice] = useState(null);
   const [selectedFrom, setSelectedFrom] = useState('');
   const [selectedTo, setSelectedTo] = useState('');
 
@@ -26,8 +26,8 @@ export default function Filter({ onFiltering }) {
     e.preventDefault();
 
     const filter = {
-      selectedMake,
-      selectedPrice: selectedPrice === '' ? 999 : selectedPrice,
+      selectedMake: selectedMake ? selectedMake.value : '',
+      selectedPrice: selectedPrice ? selectedPrice.value : 1000,
       fromMiliage: selectedFrom === '' ? 0 : Number(selectedFrom),
       toMiliage: selectedTo === '' ? 9999 : Number(selectedTo),
     };
@@ -42,15 +42,23 @@ export default function Filter({ onFiltering }) {
       .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
 
+  const onSeeAll = () => {
+    setSelectedMake(null);
+    setSelectedPrice(null);
+    setSelectedFrom('');
+    setSelectedTo('');
+  };
+
   return (
     <Form onSubmit={onSubmit}>
       <InputWrapper>
         <Lable>Car brand</Lable>
         <Select
           styles={makeSelectStyles}
+          value={selectedMake}
           options={makesOptions}
           onChange={e => {
-            setSelectedMake(e.value);
+            setSelectedMake(e);
           }}
           placeholder="Enter the text"
         />
@@ -62,9 +70,10 @@ export default function Filter({ onFiltering }) {
           id="priceSelect"
           styles={priceSelectStyles}
           options={pricesOptions}
+          value={selectedPrice}
           placeholder="$"
           onChange={e => {
-            setSelectedPrice(e.value);
+            setSelectedPrice(e);
           }}
         />
       </InputWrapper>
@@ -97,6 +106,9 @@ export default function Filter({ onFiltering }) {
       </InputWrapper>
 
       <Submit type="submit">Search</Submit>
+      <Submit type="button" onClick={onSeeAll}>
+        Reset
+      </Submit>
     </Form>
   );
 }
