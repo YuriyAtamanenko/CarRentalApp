@@ -1,6 +1,10 @@
 import { LoadMore } from './LoadMoreBtn.styled';
 
-export default function LoadMoreBtn({ onShowNextPage }) {
+interface ILoadMoreBtnProps {
+  onShowNextPage: () => void;
+}
+
+export default function LoadMoreBtn({ onShowNextPage }: ILoadMoreBtnProps) {
   return (
     <LoadMore type="button" onClick={onShowNextPage}>
       Load more
