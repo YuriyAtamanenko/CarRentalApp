@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, MouseEvent } from 'react';
 import { createPortal } from 'react-dom';
 import {
   Backdrop,
@@ -16,20 +16,27 @@ import {
   CloseButton,
 } from './Modal.styled';
 import Icons from '../../images/sprite.svg';
+import { ICar } from 'components/Catalog/CatalogItem/CatalogItem.types';
 
 const rootModal = document.querySelector('#root-modal');
 
-export default function Modal({ onCloseModal, info }) {
+interface IModalProps {
+  onCloseModal: () => void;
+  info: ICar;
+}
+
+export default function Modal({ onCloseModal, info }: IModalProps) {
   const [, city, country] = info.address.split(', ');
   const [minAge, valid, deposit] = info.rentalConditions.split('\n');
   const [min, age, numb] = minAge.split(' ');
 
   useEffect(() => {
-    const handleKeyDown = event => {
+    const handleKeyDown = (event: KeyboardEvent) => {
       if (event.code === 'Escape') {
         onCloseModal();
       }
     };
+
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
@@ -37,13 +44,13 @@ export default function Modal({ onCloseModal, info }) {
     };
   }, [onCloseModal]);
 
-  const handleBackdropClick = event => {
+  const handleBackdropClick = (event: MouseEvent) => {
     if (event.currentTarget === event.target) {
       onCloseModal();
     }
   };
 
-  const onFormatMileage = value => {
+  const onFormatMileage = (value: number) => {
     return value
       .toString()
       .replace(/,/g, '')
@@ -108,6 +115,6 @@ export default function Modal({ onCloseModal, info }) {
         </CloseButton>
       </ModalContainer>
     </Backdrop>,
-    rootModal
+    rootModal!
   );
 }
