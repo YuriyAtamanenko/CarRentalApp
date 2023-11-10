@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/CarRentalApp/static/css/main.fb8cfbbf.css",
-    "main.js": "/CarRentalApp/static/js/main.a6a0899a.js",
+    "main.js": "/CarRentalApp/static/js/main.ce60af21.js",
     "static/js/50.31ba9168.chunk.js": "/CarRentalApp/static/js/50.31ba9168.chunk.js",
-    "static/js/789.8db5153e.chunk.js": "/CarRentalApp/static/js/789.8db5153e.chunk.js",
-    "static/js/417.7d5096ec.chunk.js": "/CarRentalApp/static/js/417.7d5096ec.chunk.js",
+    "static/js/789.128a1058.chunk.js": "/CarRentalApp/static/js/789.128a1058.chunk.js",
+    "static/js/755.174bdfba.chunk.js": "/CarRentalApp/static/js/755.174bdfba.chunk.js",
     "static/js/62.fa195a4a.chunk.js": "/CarRentalApp/static/js/62.fa195a4a.chunk.js",
     "static/js/108.ae9d7c30.chunk.js": "/CarRentalApp/static/js/108.ae9d7c30.chunk.js",
     "static/media/hero-banner.png": "/CarRentalApp/static/media/hero-banner.c66975b06b50286a20c3.png",
     "static/media/sprite.svg": "/CarRentalApp/static/media/sprite.14a4fc84a6352bff35923247d4be65bb.svg",
     "index.html": "/CarRentalApp/index.html",
     "main.fb8cfbbf.css.map": "/CarRentalApp/static/css/main.fb8cfbbf.css.map",
-    "main.a6a0899a.js.map": "/CarRentalApp/static/js/main.a6a0899a.js.map",
+    "main.ce60af21.js.map": "/CarRentalApp/static/js/main.ce60af21.js.map",
     "50.31ba9168.chunk.js.map": "/CarRentalApp/static/js/50.31ba9168.chunk.js.map",
-    "789.8db5153e.chunk.js.map": "/CarRentalApp/static/js/789.8db5153e.chunk.js.map",
-    "417.7d5096ec.chunk.js.map": "/CarRentalApp/static/js/417.7d5096ec.chunk.js.map",
+    "789.128a1058.chunk.js.map": "/CarRentalApp/static/js/789.128a1058.chunk.js.map",
+    "755.174bdfba.chunk.js.map": "/CarRentalApp/static/js/755.174bdfba.chunk.js.map",
     "62.fa195a4a.chunk.js.map": "/CarRentalApp/static/js/62.fa195a4a.chunk.js.map",
     "108.ae9d7c30.chunk.js.map": "/CarRentalApp/static/js/108.ae9d7c30.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fb8cfbbf.css",
-    "static/js/main.a6a0899a.js"
+    "static/js/main.ce60af21.js"
   ]
 }
