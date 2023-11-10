@@ -9,13 +9,21 @@ import { selectFavorites } from 'redux/Favorites/selectors';
 import { Container } from 'components/App/App.styled';
 import NotFoundFavorites from 'components/NotFound/NotFoundFavorites/NotFoundFavorites';
 import NotFoundFilterCatalog from 'components/NotFound/NotFoundFilterCatalog/NotFoundFilterCatalog';
+import { ICar } from 'components/Catalog/CatalogItem/CatalogItem.types';
+
+interface IFilter {
+  selectedMake: string;
+  selectedPrice: number;
+  fromMiliage: number;
+  toMiliage: number;
+}
 
 export default function Favorites() {
   const favorites = useSelector(selectFavorites);
 
   const [isShowBtn, setIsShowBtn] = useState(true);
   const [pageCtrl, setPageCtrl] = useState(8);
-  const [filteredAdverts, setFilteredAdverts] = useState(null);
+  const [filteredAdverts, setFilteredAdverts] = useState<ICar[]>([]);
 
   useEffect(() => {
     pageCtrl >= favorites.length || favorites.length < 9
@@ -32,7 +40,7 @@ export default function Favorites() {
     selectedPrice,
     fromMiliage,
     toMiliage,
-  }) => {
+  }: IFilter) => {
     const filtering = favorites.filter(
       ({ make, rentalPrice, mileage }) =>
         make.includes(selectedMake) &&
