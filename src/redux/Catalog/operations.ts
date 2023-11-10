@@ -9,7 +9,7 @@ export const getAll = createAsyncThunk(
     try {
       const { data } = await axios.get('/adverts');
       return data;
-    } catch (error) {
+    } catch (error: any) {
       return rejectWithValue(error.message);
     }
   }
