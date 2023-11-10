@@ -1,5 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getAll } from './operations';
+// import { ICar } from 'components/Catalog/CatalogItem/CatalogItem.types';
+
+// interface ICatalogState {
+//   adverts: ICar[];
+//   isLoading: boolean;
+//   error: null;
+// }
+const initialState = {
+  adverts: [],
+  isLoading: false,
+  error: null,
+};
 
 const handlePending = state => {
   state.isLoading = true;
@@ -12,11 +24,7 @@ const handleRejected = (state, action) => {
 
 const catalogSlice = createSlice({
   name: 'catalog',
-  initialState: {
-    adverts: [],
-    isLoading: false,
-    error: null,
-  },
+  initialState,
   extraReducers: {
     [getAll.pending]: handlePending,
     [getAll.fulfilled](state, action) {

@@ -22,7 +22,10 @@ const FavoritesPersistConfig = {
 export const store = configureStore({
   reducer: {
     catalog: catalogReducer,
-    favorites: persistReducer(FavoritesPersistConfig, favoritesReducer),
+    favorites: persistReducer<TFavoritesReducer>(
+      FavoritesPersistConfig,
+      favoritesReducer
+    ),
   },
   middleware(getDefaultMiddleware) {
     return getDefaultMiddleware({
@@ -33,4 +36,6 @@ export const store = configureStore({
   },
 });
 
+export type RootState = ReturnType<typeof store.getState>;
+type TFavoritesReducer = ReturnType<typeof favoritesReducer>;
 export const persistor = persistStore(store);
