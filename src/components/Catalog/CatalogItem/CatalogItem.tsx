@@ -16,7 +16,13 @@ import {
 import Icons from '../../../images/sprite.svg';
 import { selectFavorites } from 'redux/Favorites/selectors';
 
-export default function CatalogItem({ info }) {
+import { ICar } from '../CatalogItem/CatalogItem.types';
+
+interface ICatalogItem {
+  info: ICar;
+}
+
+export default function CatalogItem({ info }: ICatalogItem) {
   const dispatch = useDispatch();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const favorites = useSelector(selectFavorites);

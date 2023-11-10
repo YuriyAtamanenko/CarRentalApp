@@ -1,7 +1,12 @@
 import { List } from './CatalogList.styled';
 import CatalogItem from '../CatalogItem/CatalogItem';
+import { ICar } from '../CatalogItem/CatalogItem.types';
 
-export default function CatalogList({ catalog }) {
+interface ICatalogListProps {
+  catalog: ICar[];
+}
+
+export default function CatalogList({ catalog }: ICatalogListProps) {
   return (
     <List>
       {catalog.map(advert => (
