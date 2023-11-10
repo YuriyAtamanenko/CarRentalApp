@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/CarRentalApp/static/css/main.fb8cfbbf.css",
-    "main.js": "/CarRentalApp/static/js/main.2c9bac64.js",
+    "main.js": "/CarRentalApp/static/js/main.2d3a696e.js",
     "static/js/662.0df489a2.chunk.js": "/CarRentalApp/static/js/662.0df489a2.chunk.js",
-    "static/js/476.1fd10099.chunk.js": "/CarRentalApp/static/js/476.1fd10099.chunk.js",
-    "static/js/440.a556d259.chunk.js": "/CarRentalApp/static/js/440.a556d259.chunk.js",
+    "static/js/789.e589488a.chunk.js": "/CarRentalApp/static/js/789.e589488a.chunk.js",
+    "static/js/440.b5913b0f.chunk.js": "/CarRentalApp/static/js/440.b5913b0f.chunk.js",
     "static/js/62.fa195a4a.chunk.js": "/CarRentalApp/static/js/62.fa195a4a.chunk.js",
-    "static/js/973.a1087819.chunk.js": "/CarRentalApp/static/js/973.a1087819.chunk.js",
+    "static/js/973.5deb7b5b.chunk.js": "/CarRentalApp/static/js/973.5deb7b5b.chunk.js",
     "static/media/hero-banner.png": "/CarRentalApp/static/media/hero-banner.c66975b06b50286a20c3.png",
     "static/media/sprite.svg": "/CarRentalApp/static/media/sprite.14a4fc84a6352bff35923247d4be65bb.svg",
     "index.html": "/CarRentalApp/index.html",
     "main.fb8cfbbf.css.map": "/CarRentalApp/static/css/main.fb8cfbbf.css.map",
-    "main.2c9bac64.js.map": "/CarRentalApp/static/js/main.2c9bac64.js.map",
+    "main.2d3a696e.js.map": "/CarRentalApp/static/js/main.2d3a696e.js.map",
     "662.0df489a2.chunk.js.map": "/CarRentalApp/static/js/662.0df489a2.chunk.js.map",
-    "476.1fd10099.chunk.js.map": "/CarRentalApp/static/js/476.1fd10099.chunk.js.map",
-    "440.a556d259.chunk.js.map": "/CarRentalApp/static/js/440.a556d259.chunk.js.map",
+    "789.e589488a.chunk.js.map": "/CarRentalApp/static/js/789.e589488a.chunk.js.map",
+    "440.b5913b0f.chunk.js.map": "/CarRentalApp/static/js/440.b5913b0f.chunk.js.map",
     "62.fa195a4a.chunk.js.map": "/CarRentalApp/static/js/62.fa195a4a.chunk.js.map",
-    "973.a1087819.chunk.js.map": "/CarRentalApp/static/js/973.a1087819.chunk.js.map"
+    "973.5deb7b5b.chunk.js.map": "/CarRentalApp/static/js/973.5deb7b5b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fb8cfbbf.css",
-    "static/js/main.2c9bac64.js"
+    "static/js/main.2d3a696e.js"
   ]
 }
