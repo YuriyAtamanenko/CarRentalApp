@@ -22,7 +22,7 @@ export default function Catalog() {
   const catalog = useSelector(selectCatalog);
   const [isShowBtn, setIsShowBtn] = useState(true);
   const [pageCtrl, setPageCtrl] = useState(8);
-  const [filteredAdverts, setFilteredAdverts] = useState<ICar[]>([]);
+  const [filteredAdverts, setFilteredAdverts] = useState<ICar[] | null>(null);
 
   useEffect(() => {
     dispatch(getAll());
@@ -56,6 +56,10 @@ export default function Catalog() {
     setIsShowBtn(false);
   };
 
+  const isFilteredAdverts = () => {
+    return filteredAdverts && filteredAdverts.length === 0;
+  };
+
   return (
     <Container>
       <Filter onFiltering={onFiltering} />
@@ -65,7 +69,7 @@ export default function Catalog() {
         <CatalogList catalog={catalog.slice(0, pageCtrl)} />
       )}
       {isShowBtn && <LoadMoreBtn onShowNextPage={onShowNextPage} />}
-      {filteredAdverts?.length === 0 && <NotFoundFilterCatalog />}
+      {isFilteredAdverts() && <NotFoundFilterCatalog />}
     </Container>
   );
 }
