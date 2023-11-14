@@ -8,6 +8,17 @@ import Filter from 'components/Filter/Filter';
 import { Container } from 'components/App/App.styled';
 import NotFoundFilterCatalog from 'components/NotFound/NotFoundFilterCatalog/NotFoundFilterCatalog';
 
+// interface IFilter {
+//   selectedMake: string;
+//   selectedPrice: number;
+//   fromMiliage: number;
+//   toMiliage: number;
+// }
+
+// interface IFilterProps {
+//   onFiltering: (filter: IFilter) => void;
+// }
+
 export default function Catalog() {
   const dispatch = useDispatch();
   const catalog = useSelector(selectCatalog);
