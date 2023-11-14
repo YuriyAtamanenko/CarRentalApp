@@ -7,24 +7,22 @@ import LoadMoreBtn from 'components/LoadMoreBtn/LoadMoreBtn';
 import Filter from 'components/Filter/Filter';
 import { Container } from 'components/App/App.styled';
 import NotFoundFilterCatalog from 'components/NotFound/NotFoundFilterCatalog/NotFoundFilterCatalog';
+import { ICar } from 'components/Catalog/CatalogItem/CatalogItem.types';
+import { AppDispatch } from 'redux/store';
 
-// interface IFilter {
-//   selectedMake: string;
-//   selectedPrice: number;
-//   fromMiliage: number;
-//   toMiliage: number;
-// }
-
-// interface IFilterProps {
-//   onFiltering: (filter: IFilter) => void;
-// }
+interface IFilter {
+  selectedMake: string;
+  selectedPrice: number;
+  fromMiliage: number;
+  toMiliage: number;
+}
 
 export default function Catalog() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const catalog = useSelector(selectCatalog);
   const [isShowBtn, setIsShowBtn] = useState(true);
   const [pageCtrl, setPageCtrl] = useState(8);
-  const [filteredAdverts, setFilteredAdverts] = useState(null);
+  const [filteredAdverts, setFilteredAdverts] = useState<ICar[]>([]);
 
   useEffect(() => {
     dispatch(getAll());
@@ -45,7 +43,7 @@ export default function Catalog() {
     selectedPrice,
     fromMiliage,
     toMiliage,
-  }) => {
+  }: IFilter) => {
     const filtering = catalog.filter(
       ({ make, rentalPrice, mileage }) =>
         make.includes(selectedMake) &&
