@@ -23,7 +23,7 @@ export default function Favorites() {
 
   const [isShowBtn, setIsShowBtn] = useState(true);
   const [pageCtrl, setPageCtrl] = useState(8);
-  const [filteredAdverts, setFilteredAdverts] = useState<ICar[]>([]);
+  const [filteredAdverts, setFilteredAdverts] = useState<ICar[] | null>(null);
 
   useEffect(() => {
     pageCtrl >= favorites.length || favorites.length < 9
@@ -53,6 +53,10 @@ export default function Favorites() {
     setIsShowBtn(false);
   };
 
+  const isFilteredAdverts = () => {
+    return filteredAdverts && filteredAdverts.length === 0;
+  };
+
   return (
     <Container>
       <Filter onFiltering={onFiltering} />
@@ -63,7 +67,7 @@ export default function Favorites() {
       )}
       {isShowBtn && <LoadMoreBtn onShowNextPage={onShowNextPage} />}
       {favorites.length === 0 && <NotFoundFavorites />}
-      {filteredAdverts?.length === 0 && <NotFoundFilterCatalog />}
+      {isFilteredAdverts() && <NotFoundFilterCatalog />}
     </Container>
   );
 }
