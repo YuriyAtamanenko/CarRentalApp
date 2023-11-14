@@ -1,8 +1,6 @@
-import {
-  useState,
-  // FormEvent
-} from 'react';
+import { useState } from 'react';
 import Select from 'react-select';
+
 import {
   Submit,
   Lable,
@@ -18,17 +16,6 @@ import {
 import { makeSelectStyles, priceSelectStyles } from './CustomSelectStyles';
 import { makesOptions } from 'db/makesList';
 import { pricesOptions } from 'db/priceList';
-
-// interface IFilter {
-//   selectedMake: string;
-//   selectedPrice: number;
-//   fromMiliage: number;
-//   toMiliage: number;
-// }
-
-// interface IFilterProps {
-//   onFiltering: (filter: IFilter) => void;
-// }
 
 export default function Filter({ onFiltering }) {
   const [selectedMake, setSelectedMake] = useState(null);

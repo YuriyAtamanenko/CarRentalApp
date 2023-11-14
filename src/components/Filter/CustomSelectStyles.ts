@@ -1,5 +1,7 @@
-export const makeSelectStyles = {
-  control: (baseStyles, { isHover }) => ({
+import { StylesConfig } from 'react-select';
+
+export const makeSelectStyles: StylesConfig = {
+  control: baseStyles => ({
     ...baseStyles,
     border: 'none',
     width: 224,
@@ -39,10 +41,10 @@ export const makeSelectStyles = {
   }),
 };
 
-export const priceSelectStyles = {
-  control: (baseStyles, { isHover }) => ({
+export const priceSelectStyles: StylesConfig = {
+  control: (baseStyles, state) => ({
     ...baseStyles,
-    border: isHover ? 'none' : 'none',
+    border: state.isFocused ? 'none' : 'none',
     width: 125,
     height: 48,
     borderRadius: 14,
