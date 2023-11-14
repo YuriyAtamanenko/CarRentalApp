@@ -79,7 +79,7 @@ export default function Filter({ onFiltering }) {
         />
       </InputWrapper>
       <InputWrapper>
-        <Lable>Сar mileage / km</Lable>
+        <Lable>Car mileage / km</Lable>
         <div style={{ display: 'flex', position: 'relative' }}>
           <ImputBox>
             <ImputBoxLabel htmlFor="mileageFrom">From</ImputBoxLabel>
