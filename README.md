@@ -7,7 +7,7 @@ by the selected options and save to favorites
 
 
 Live Page -
-[yuriyatamanenko.github.io/CarRentalApp](yuriyatamanenko.github.io/CarRentalApp/)
+[yuriyatamanenko.github.io/CarRentalApp/](yuriyatamanenko.github.io/CarRentalApp/)
 
 ## Technologies Used
 
