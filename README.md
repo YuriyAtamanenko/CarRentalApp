@@ -6,8 +6,7 @@ Web application for car rental. In this application, you can filter cars
 by the selected options and save to favorites
 
 
-Live Page -
-[yuriyatamanenko.github.io/CarRentalApp/](yuriyatamanenko.github.io/CarRentalApp/)
+Live Page - [yuriyatamanenko.github.io/CarRentalApp/](https://yuriyatamanenko.github.io/CarRentalApp/)
 
 ## Technologies Used
 
