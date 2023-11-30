@@ -7,7 +7,7 @@ by the selected options and save to favorites
 
 
 Live Page -
-[yuriyatamanenko.github.io/RentalCarApp/](yuriyatamanenko.github.io/RentalCarApp/)
+[yuriyatamanenko.github.io/CarRentalApp](yuriyatamanenko.github.io/CarRentalApp/)
 
 ## Technologies Used
 
@@ -25,7 +25,7 @@ To get started with this project, follow the installation instructions below.
 1. Clone the repository:
 
    git clone
-   [https://github.com/YuriyAtamanenko/RentalCarApp.git](https://github.com/YuriyAtamanenko/RentalCarApp.git)
+   [https://github.com/YuriyAtamanenko/CarRentalApp.git](https://github.com/YuriyAtamanenko/CarRentalApp.git)
 
 2. Install the dependencies:
 
